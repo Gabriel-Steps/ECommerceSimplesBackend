@@ -12,9 +12,9 @@ namespace ECommerceSimplesBackend.Infra.Repositories.AuthRepositories
             _context = context;
         }
 
-        public async Task<User?> LoginUser(string email, string password, CancellationToken cancellationToken)
+        public async Task<User?> LoginUser(string email, CancellationToken cancellationToken)
         {
-            return await _context.Users.SingleOrDefaultAsync(user => user.Email == email && user.Password == password, cancellationToken);
+            return await _context.Users.SingleOrDefaultAsync(user => user.Email == email, cancellationToken);
         }
 
         public async Task Register(User user, CancellationToken cancellationToken)

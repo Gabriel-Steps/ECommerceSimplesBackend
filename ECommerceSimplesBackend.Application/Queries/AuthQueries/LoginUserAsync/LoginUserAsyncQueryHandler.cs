@@ -4,22 +4,22 @@ using ECommerceSimplesBackend.Application.ViewModels.AuthViewModels;
 using ECommerceSimplesBackend.Infra.Repositories.AuthRepositories;
 using MediatR;
 
-namespace ECommerceSimplesBackend.Application.Commands.AuthCommands.LoginUserAsync
+namespace ECommerceSimplesBackend.Application.Queries.AuthQueries.LoginUserAsync
 {
-    public class LoginUserAsyncCommandHandler : IRequestHandler<LoginUserAsyncCommand, UserAuthViewModelDto>
+    public class LoginUserAsyncQueryHandler : IRequestHandler<LoginUserAsyncQuery, UserAuthViewModelDto>
     {
         private readonly IAuthRepository _authRepository;
         private readonly PasswordService passwordService;
         private readonly TokenService tokenService;
         
-        public LoginUserAsyncCommandHandler(IAuthRepository authRepository, PasswordService passwordService, TokenService tokenService)
+        public LoginUserAsyncQueryHandler(IAuthRepository authRepository, PasswordService passwordService, TokenService tokenService)
         {
             _authRepository = authRepository;
             this.passwordService = passwordService;
             this.tokenService = tokenService;
         }
 
-        public async Task<UserAuthViewModelDto> Handle(LoginUserAsyncCommand request, CancellationToken cancellationToken)
+        public async Task<UserAuthViewModelDto> Handle(LoginUserAsyncQuery request, CancellationToken cancellationToken)
         {
             var user = await _authRepository.LoginUser(request.Email, cancellationToken) ??
                 throw new UserNotFoundByLoginException(request.Email);

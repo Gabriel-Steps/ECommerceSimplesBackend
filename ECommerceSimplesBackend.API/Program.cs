@@ -1,6 +1,11 @@
 using ECommerceSimplesBackend.Application.Services;
 using ECommerceSimplesBackend.Infra;
 using ECommerceSimplesBackend.Infra.Repositories.AuthRepositories;
+using ECommerceSimplesBackend.Infra.Repositories.CartItemRepositories;
+using ECommerceSimplesBackend.Infra.Repositories.CartRepositories;
+using ECommerceSimplesBackend.Infra.Repositories.OrderRepositories;
+using ECommerceSimplesBackend.Infra.Repositories.ProductRepositories;
+using ECommerceSimplesBackend.Infra.Repositories.UserRepositories;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -30,6 +35,11 @@ builder.Services.AddTransient<PasswordService>();
 
 #region Repositories
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ICartItemRepository, CartItemRepository>();
+builder.Services.AddScoped<ICartRepository, CartRepository>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 #endregion
 
 builder.Services.AddValidatorsFromAssembly(

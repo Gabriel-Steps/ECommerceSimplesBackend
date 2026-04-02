@@ -1,9 +1,9 @@
 ﻿using ECommerceSimplesBackend.Application.ViewModels.AuthViewModels;
 using MediatR;
 
-namespace ECommerceSimplesBackend.Application.Commands.AuthCommands.LoginUserAsync
+namespace ECommerceSimplesBackend.Application.Queries.AuthQueries.LoginUserAsync
 {
-    public class LoginUserAsyncCommand : IRequest<UserAuthViewModelDto>
+    public class LoginUserAsyncQuery : IRequest<UserAuthViewModelDto>
     {
         public string Email { get; set; } = null!;
         public string Password { get; set; } = null!;
