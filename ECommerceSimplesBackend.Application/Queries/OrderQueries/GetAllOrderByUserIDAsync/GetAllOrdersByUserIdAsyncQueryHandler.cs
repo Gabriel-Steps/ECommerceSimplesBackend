@@ -2,7 +2,7 @@
 using ECommerceSimplesBackend.Infra.Repositories.OrderRepositories;
 using MediatR;
 
-namespace ECommerceSimplesBackend.Application.Queries.OrderQueries
+namespace ECommerceSimplesBackend.Application.Queries.OrderQueries.GetAllOrderByUserIDAsync
 {
     public class GetAllOrdersByUserIdAsyncQueryHandler : IRequestHandler<GetAllOrdersByUserIdAsyncQuery, List<Order>>
     {
