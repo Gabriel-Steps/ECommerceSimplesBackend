@@ -172,7 +172,6 @@ dotnet run --project ECommerceSimplesBackend.API
 ## 🔗 Repositórios
 
 - [**Backend:**](https://github.com/Gabriel-Steps/ECommerceSimplesBackend)
-- **Frontend:** [link do repositório frontend]
 
 ---
 
