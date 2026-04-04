@@ -5,5 +5,10 @@ namespace ECommerceSimplesBackend.Application.Commands.OrderCommands.DeleteOrder
     public class DeleteOrderAsyncCommand : IRequest<Unit>
     {
         public int Id { get; set; }
+
+        public DeleteOrderAsyncCommand(int id)
+        {
+            Id = id;
+        }
     }
 }
