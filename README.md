@@ -164,7 +164,7 @@ dotnet run --project ECommerceSimplesBackend.API
 - [x] Entidades e relacionamentos
 - [x] Migrations
 - [x] Commands e Queries de todas as entidades
-- [ ] Controllers
+- [x] Controllers
 - [x] FluentValidation
 
 ---
