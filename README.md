@@ -165,14 +165,13 @@ dotnet run --project ECommerceSimplesBackend.API
 - [x] Migrations
 - [x] Commands e Queries de todas as entidades
 - [ ] Controllers
-- [ ] FluentValidation
+- [x] FluentValidation
 
 ---
 
 ## 🔗 Repositórios
 
 - [**Backend:**](https://github.com/Gabriel-Steps/ECommerceSimplesBackend)
-- **Frontend:** [link do repositório frontend]
 
 ---
 
